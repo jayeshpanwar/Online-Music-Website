@@ -37,6 +37,8 @@ public class Home extends HttpServlet {
        if(hs!=null)
        {
         RequestDispatcher rd=request.getRequestDispatcher("logout.html");
+        
+        out.println(" <a href=\"edit.jsp?idd=userid\">Edit Profile</a>");
         rd.include(request, response);
         
         String name=(String)hs.getAttribute("naam");
